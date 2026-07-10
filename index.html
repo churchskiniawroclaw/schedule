@@ -1,83 +1,120 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Расписание</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background:linear-gradient(135deg,#111,#333);
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Расписание</title>
 
-        .card {
-            background:rgba(255,255,255,.08);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            width: 320px;
-            box-shadow: 0 10px 30px rgba(0,0,0,.4);
-        }
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+    background:linear-gradient(135deg,#111,#333);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+}
 
-        h1 {
-            text-align: center;
-            margin-top: 0;
-            margin-bottom: 25px;
-        }
+.card{
+    width:90%;
+    max-width:420px;
+    background:rgba(255,255,255,.08);
+    border-radius:24px;
+    padding:40px 30px;
+    text-align:center;
+    backdrop-filter:blur(10px);
+    box-shadow:0 15px 40px rgba(0,0,0,.4);
+}
 
-        .item {
-            display: flex;
-            justify-content: space-between;
-            padding: 14px 0;
-            border-bottom: 1px solid rgba(255,255,255,.2);
-            font-size: 18px;
-        }
+h1{
+    margin-bottom:10px;
+}
 
-        .item:last-child {
-            border-bottom: none;
-        }
+p{
+    color:#ddd;
+    margin-bottom:30px;
+}
 
-        .time {
-            font-weight: bold;
-        }
+.item{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:16px 20px;
+    margin:15px 0;
+    border-radius:15px;
+    background:#ffffff20;
+    transition:.3s;
+}
 
-        footer {
-            text-align: center;
-            margin-top: 20px;
-            opacity: .8;
-            font-size: 14px;
-        }
-    </style>
+.item:hover{
+    background:white;
+    color:#111;
+}
+
+.left{
+    text-align:left;
+}
+
+.day{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.event{
+    font-size:14px;
+    opacity:.8;
+}
+
+.time{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.footer{
+    margin-top:30px;
+    color:#bbb;
+    font-size:14px;
+}
+</style>
+
 </head>
 <body>
 
 <div class="card">
-    <h1> Расписание</h1>
 
-    <div class="item">
-        <span>Четверг</span>
-        <span class="time">19:00</span>
+<h1>Расписание</h1>
+<p>Skinia Wrocław</p>
+
+<div class="item">
+    <div class="left">
+        <div class="day">Четверг</div>
+        <div class="event">Домажка</div>
     </div>
+    <div class="time">19:00</div>
+</div>
 
-    <div class="item">
-        <span>Суббота</span>
-        <span class="time">19:00</span>
+<div class="item">
+    <div class="left">
+        <div class="day">Суббота</div>
+        <div class="event">Молодёжка</div>
     </div>
+    <div class="time">19:00</div>
+</div>
 
-    <div class="item">
-        <span>Воскресенье</span>
-        <span class="time">16:00</span>
+<div class="item">
+    <div class="left">
+        <div class="day">Воскресенье</div>
+        <div class="event">Собрание</div>
     </div>
+    <div class="time">16:00</div>
+</div>
 
-    <footer>
-        До встречи!
-    </footer>
+<div class="footer">
+© Skinia Wrocław
+</div>
+
 </div>
 
 </body>
